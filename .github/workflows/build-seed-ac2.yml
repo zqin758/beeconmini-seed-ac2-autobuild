@@ -77,7 +77,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: beeconmini-seed-ac2-${{ github.run_number }}
+          name: beeconmini-seed-ac3-${{ github.run_number }}
           path: /tmp/artifacts/
 
       # 9、生成 yyyymmdd+run_number
@@ -91,7 +91,7 @@ jobs:
         if: success()
         with:
           tag_name: ${{ steps.tag.outputs.TAG }}
-          name: "Beecon Mini SEED AC2 build ${{ steps.tag.outputs.TAG }}"
+          name: "Beecon Mini SEED ac3 build ${{ steps.tag.outputs.TAG }}"
           body: |
             Auto-built from ${{ github.sha }}
           files: |
