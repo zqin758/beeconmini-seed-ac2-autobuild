@@ -24,7 +24,7 @@ jobs:
 
       - name: 克隆源码
         run: |
-          git clone --depth=1 https://github.com/BeeconMini/immortalwrt.git
+          git clone -b 25.12.0-rc2 --single-branch https://github.com/zqin758/immortalwrt.git
           cd immortalwrt
 
       - name: 更新 feeds
@@ -39,7 +39,7 @@ jobs:
           cat > .config <<EOF
           CONFIG_TARGET_mediatek=y
           CONFIG_TARGET_mediatek_filogic=y
-          CONFIG_TARGET_mediatek_filogic_DEVICE_beeconmini_seed-ac=y
+          CONFIG_TARGET_mediatek_filogic_DEVICE_beeconmini_seed-ac3=y
           CONFIG_PACKAGE_kmod-ipt-offload=y
           EOF
           make defconfig
