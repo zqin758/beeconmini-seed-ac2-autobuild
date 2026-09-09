@@ -44,7 +44,7 @@ jobs:
       - name: Clone & feeds
         run: |
           cd $WORKSPACE
-          git clone --depth=1 https://github.com/BeeconMini/immortalwrt.git openwrt
+          git clone -b 25.12.0-rc2 --single-branch https://github.com/zqin758/immortalwrt.git openwrt
           cd openwrt
           ./scripts/feeds update -a
           ./scripts/feeds install -a
@@ -54,8 +54,8 @@ jobs:
         run: |
           cd $WORKSPACE/openwrt
           #cp -f $GITHUB_WORKSPACE/source/mt798x-common.config .config
-          #cat $GITHUB_WORKSPACE/source/beeconmini-seed-ac2-extra.config >> .config
-          cp -f $GITHUB_WORKSPACE/source/beeconmini-seed-ac2-extra.config .config
+          #cat $GITHUB_WORKSPACE/source/beeconmini-seed-ac3-extra.config >> .config
+          cp -f $GITHUB_WORKSPACE/source/beeconmini-seed-ac3-extra.config .config
           make defconfig
 
       # 6. 下载 + 编译
