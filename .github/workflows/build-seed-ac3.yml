@@ -53,9 +53,9 @@ jobs:
       - name: Config & extra options
         run: |
           cd $WORKSPACE/openwrt
-          #cp -f $GITHUB_WORKSPACE/source/mt798x-common.config .config
+          cp -f $GITHUB_WORKSPACE/source/mt798x-common.config .config
           #cat $GITHUB_WORKSPACE/source/beeconmini-seed-ac3-extra.config >> .config
-          cp -f $GITHUB_WORKSPACE/source/beeconmini-seed-ac3-extra.config .config
+          #cp -f $GITHUB_WORKSPACE/source/beeconmini-seed-ac3-extra.config .config
           make defconfig
 
       # 6. 下载 + 编译
