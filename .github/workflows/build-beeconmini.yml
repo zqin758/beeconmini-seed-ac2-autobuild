@@ -24,7 +24,7 @@ jobs:
 
       - name: 克隆源码
         run: |
-          git clone --depth=1 https://github.com/BeeconMini/immortalwrt.git
+          git clone  -b 25.12.1 --single-branch https://github.com/BeeconMini/immortalwrt.git
           cd immortalwrt
 
       - name: 更新 feeds
