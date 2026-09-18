@@ -44,7 +44,7 @@ jobs:
       - name: Clone & feeds
         run: |
           cd $WORKSPACE
-          git clone  -b 25.12.1 --single-branch https://github.com/BeeconMini/immortalwrt.git openwrt
+          git clone  -b 25.12.1 --single-branch https://github.com/zqin758/immortalwrt.git openwrt
           cd openwrt
           ./scripts/feeds update -a
           ./scripts/feeds install -a
